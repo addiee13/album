@@ -95,6 +95,7 @@
     background: rgba(255, 215, 0, 0.1);
 }
 
+<<<<<<< HEAD
 .cta-button {
     position: absolute;
     bottom: -20rem; /* Adjust the value as needed */
@@ -111,3 +112,5 @@
     animation: fadeInUp 1s ease 0.4s;
     animation-fill-mode: backwards;
 }
+=======
+>>>>>>> 54d6211ea31da50e188c6e0d3b75fd6469cbc37f
