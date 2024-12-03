@@ -246,8 +246,7 @@ body {
     font-size: 0.9rem;
 }
 
-<<<<<<< HEAD
-=======
+
 .album-title-logo {
     max-width: 100%;
     height: auto;
@@ -388,7 +387,6 @@ footer {
     padding: 2rem;
     border-top: 1px solid rgba(255, 215, 0, 0.1);
 }
->>>>>>> 54d6211ea31da50e188c6e0d3b75fd6469cbc37f
 
 /* Responsive Design */
 @media (max-width: 768px) {

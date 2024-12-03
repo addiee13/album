@@ -26,7 +26,7 @@
 /* Add these styles to css/style.css */
 
 .navbar {
-    background: rgba(26, 42, 61, 0.95);
+    background: transparent;
     padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,6 @@
     z-index: 1000;
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 .nav-brand {
@@ -63,7 +62,7 @@
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #79614E;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
@@ -80,22 +79,19 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: #ffd700;
+    background: transparent; /* Ensure no yellow color */
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
-    width: 100%;
+    width: 0; /* Set width to 0 to remove the underline animation */
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: #ffd700;
-    background: rgba(255, 215, 0, 0.1);
+.nav-links a:hover {
+    color: #ffffff;
 }
 
-<<<<<<< HEAD
 .cta-button {
     position: absolute;
     bottom: -20rem; /* Adjust the value as needed */
@@ -112,5 +108,4 @@
     animation: fadeInUp 1s ease 0.4s;
     animation-fill-mode: backwards;
 }
-=======
->>>>>>> 54d6211ea31da50e188c6e0d3b75fd6469cbc37f
+
