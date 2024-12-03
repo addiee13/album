@@ -1,61 +1,207 @@
-.album-page {
-    min-height: 100vh;
-    background: #000;
-    padding: 120px 0 60px;
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.album-hero {
-    height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('https://placehold.co/1920x1080') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: rgb(52, 82, 104);
 }
 
-.album-info {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.album-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
-}
-
-.tracklist {
-    max-width: 800px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-}
-
-.track-item {
+/* Navigation */
+.navbar {
+    background-color: rgba(52, 82, 104, 0.95);
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    transition: background-color 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
-.track-item:hover {
-    background-color: rgba(255,255,255,0.05);
+.nav-brand {
+    color: #ffd700;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.track-number {
-    font-size: 1.2rem;
-    opacity: 0.5;
-    width: 40px;
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
 }
 
-.track-title {
-    flex-grow: 1;
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffd700;
+}
+
+/* Album Page */
+.album-page {
+    padding-top: 80px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(52, 82, 104), rgb(42, 72, 94));
+}
+
+.album-header {
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    gap: 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+.album-cover {
+    width: 232px;
+    height: 232px;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.album-type {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.album-info h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.album-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.album-meta > *:not(:last-child)::after {
+    content: "•";
+    margin-left: 0.5rem;
+}
+
+.player-controls {
+    padding: 1.5rem 2rem;
+}
+
+.play-button {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #ffd700;
+    border: none;
+    color: rgb(52, 82, 104);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+}
+
+.tracklist {
     padding: 0 2rem;
 }
 
+.track-header {
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    padding: 0.5rem 1rem;
+    color: #b3b3b3;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+
+.track {
+    display: grid;
+    grid-template-columns: 40px 48px 1fr 48px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.track:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.track-image {
+    width: 40px;
+    height: 40px;
+}
+
+.track-number {
+    color: #b3b3b3;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-title {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.track-artist {
+    color: #b3b3b3;
+    font-size: 0.875rem;
+}
+
 .track-duration {
-    opacity: 0.5;
+    color: #b3b3b3;
+    font-size: 0.875rem;
+}
+
+/* Footer */
+footer {
+    background: rgb(42, 72, 94);
+    color: #b3b3b3;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .album-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .album-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .track {
+        grid-template-columns: 48px 1fr 48px;
+    }
+
+    .track-image {
+        display: none;
+    }
 }
