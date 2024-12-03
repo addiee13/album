@@ -9,13 +9,13 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #ffffff;
-    background-color: rgb(52, 82, 104);
+    background: linear-gradient(135deg, #1a2a3d 0%, #2c465e 50%, #345268 100%);
 }
 
 /* Navigation */
 .navbar {
-    background-color: rgba(52, 82, 104, 0.95);
-    padding: 1rem 2rem;
+    background: rgba(26, 42, 61, 0.95);
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,177 +24,286 @@ body {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 .nav-brand {
     color: #ffd700;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav-brand:hover {
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .nav-links a {
     color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: #ffd700;
+    background: rgba(255, 215, 0, 0.1);
 }
 
 /* Album Page */
 .album-page {
-    padding-top: 80px;
+    padding-top: 100px;
     min-height: 100vh;
-    background: linear-gradient(to bottom, rgb(52, 82, 104), rgb(42, 72, 94));
+    background: linear-gradient(to bottom, rgba(26, 42, 61, 0.95), rgba(44, 70, 94, 0.95));
 }
 
 .album-header {
     display: flex;
     align-items: flex-end;
-    padding: 2rem;
-    gap: 2rem;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+    padding: 3rem;
+    gap: 3rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
 }
 
 .album-cover {
-    width: 232px;
-    height: 232px;
-    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-cover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.2);
 }
 
 .album-info {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .album-type {
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .album-info h1 {
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 4.5rem;
+    font-weight: 800;
     letter-spacing: -0.04em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .album-meta {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #ffd700;
 }
 
 .album-meta > *:not(:last-child)::after {
     content: "•";
-    margin-left: 0.5rem;
+    margin-left: 1rem;
+    color: rgba(255, 215, 0, 0.5);
 }
 
 .player-controls {
-    padding: 1.5rem 2rem;
+    padding: 2rem 3rem;
 }
 
 .play-button {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
-    background-color: #ffd700;
+    background: linear-gradient(145deg, #ffd700, #ffed4a);
     border: none;
-    color: rgb(52, 82, 104);
-    font-size: 1.5rem;
+    color: #1a2a3d;
+    font-size: 1.8rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
 .play-button:hover {
     transform: scale(1.05);
-}
-
-.tracklist {
-    padding: 0 2rem;
-}
-
-.track-header {
-    display: grid;
-    grid-template-columns: 48px 1fr 48px;
-    padding: 0.5rem 1rem;
-    color: #b3b3b3;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 1rem;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
 
 .track {
     display: grid;
     grid-template-columns: 40px 48px 1fr 48px;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 1rem;
+    border-radius: 8px;
     align-items: center;
     gap: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
 }
 
 .track:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 215, 0, 0.1);
+    transform: translateX(10px);
+}
+
+.track:hover .track-number {
+    color: #ffd700;
+}
+
+.track:hover .track-title {
+    color: #ffd700;
 }
 
 .track-image {
     width: 40px;
     height: 40px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
 }
 
-.track-number {
-    color: #b3b3b3;
+.track:hover .track-image {
+    transform: scale(1.1);
 }
 
-.track-info {
-    display: flex;
-    flex-direction: column;
+/* Merchandise Grid */
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.track-title {
-    color: #ffffff;
-    font-weight: 500;
+.merch-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.1);
 }
 
-.track-artist {
-    color: #b3b3b3;
-    font-size: 0.875rem;
+.merch-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.3);
 }
 
-.track-duration {
-    color: #b3b3b3;
-    font-size: 0.875rem;
+.merch-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.merch-item:hover img {
+    transform: scale(1.05);
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin: 1rem 0;
+}
+
+.add-to-cart {
+    background: linear-gradient(145deg, #ffd700, #ffed4a);
+    color: #1a2a3d;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
 }
 
 /* Footer */
 footer {
-    background: rgb(42, 72, 94);
-    color: #b3b3b3;
+    background: rgba(26, 42, 61, 0.95);
+    color: #ffffff;
     text-align: center;
     padding: 2rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-brand {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
     .album-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 2rem 1rem;
     }
 
     .album-info h1 {
         font-size: 2.5rem;
+    }
+
+    .album-cover {
+        width: 250px;
+        height: 250px;
     }
 
     .track {
@@ -203,5 +312,10 @@ footer {
 
     .track-image {
         display: none;
+    }
+
+    .merch-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
     }
 }
