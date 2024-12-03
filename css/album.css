@@ -124,9 +124,8 @@ body {
 }
 
 .album-info h1 {
-    font-family: 'Spicy Rice';
     font-size: 4.5rem;
-    font-weight: 100;
+    font-weight: 800;
     letter-spacing: -0.04em;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -171,9 +170,13 @@ body {
     box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
 
+.tracklist {
+    padding: 0 3rem;
+}
+
 .track {
     display: grid;
-    grid-template-columns: 40px 48px 1fr 48px;
+    grid-template-columns: 40px 48px 1fr auto;
     padding: 1rem;
     border-radius: 8px;
     align-items: center;
@@ -188,31 +191,120 @@ body {
     transform: translateX(10px);
 }
 
-.track:hover .track-number {
+.track-number {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-title {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.track-artist {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.track-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.track-play-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid rgba(255, 215, 0, 0.3);
     color: #ffd700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
 }
 
-.track:hover .track-title {
+.track:hover .track-play-button {
+    opacity: 1;
+}
+
+.track-duration {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* About Page */
+.about-page {
+    padding: 120px 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    display: grid;
+    gap: 3rem;
+    align-items: start;
+}
+
+.band-photo {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.band-members {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.band-members h2 {
     color: #ffd700;
+    margin-bottom: 1rem;
 }
 
-.track-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
+.band-members ul {
+    list-style: none;
 }
 
-.track:hover .track-image {
-    transform: scale(1.1);
+.band-members li {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Merchandise Grid */
+.merch-page {
+    padding: 120px 2rem 4rem;
+}
+
+.merch-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 .merch-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -233,25 +325,33 @@ body {
     border-color: rgba(255, 215, 0, 0.3);
 }
 
-.merch-item img {
+.merch-image {
     width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
 }
 
-.merch-item:hover img {
+.merch-item:hover .merch-image {
     transform: scale(1.05);
 }
 
-.price {
+.merch-name {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.merch-price {
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffd700;
     margin: 1rem 0;
 }
 
-.add-to-cart {
+.merch-button {
     background: linear-gradient(145deg, #ffd700, #ffed4a);
     color: #1a2a3d;
     border: none;
@@ -260,9 +360,10 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
-.add-to-cart:hover {
+.merch-button:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
 }
@@ -308,7 +409,7 @@ footer {
     }
 
     .track {
-        grid-template-columns: 48px 1fr 48px;
+        grid-template-columns: 48px 1fr auto;
     }
 
     .track-image {
