@@ -124,8 +124,9 @@ body {
 }
 
 .album-info h1 {
+    font-family: 'Spicy Rice';
     font-size: 4.5rem;
-    font-weight: 800;
+    font-weight: 100;
     letter-spacing: -0.04em;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
