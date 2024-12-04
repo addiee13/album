@@ -76,11 +76,29 @@ body {
     color: #e36161;
 }
 
+.nav-links a i {
+    font-size: 1.2rem;
+}
+
+.search-button {
+    padding: 0.4rem 0.8rem;
+    background: none;
+    color: #79614E;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.search-button:hover {
+    color: #EFDCA3;
+}
+
 .cart-icon {
     position: relative;
 }
 
-.cart-icon label {
+.cart-button {
     padding: 0.8rem 1.5rem;
     background: linear-gradient(145deg, #EFDCA3, #b17f5e);
     color: #1a2a3d;
@@ -89,9 +107,10 @@ body {
     transition: all 0.3s ease;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(239, 220, 163, 0.3);
+    border: none;
 }
 
-.cart-icon label:hover {
+.cart-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(239, 220, 163, 0.4);
 }
@@ -134,6 +153,14 @@ body {
     font-size: 2.5rem;
     color: #EFDCA3;
     margin-bottom: 1rem;
+}
+
+.merch-description {
+    font-size: 1.2rem;
+    color: #EFDCA3;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Custom Navbar Styles for Merch Page */
