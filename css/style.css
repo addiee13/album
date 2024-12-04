@@ -4,6 +4,11 @@
 @import 'album.css';
 @import 'merch.css';
 
+/* Global Styles */
+body {
+    font-family: 'Cormorant', serif;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
@@ -22,7 +27,6 @@
         grid-template-columns: 1fr;
     }
 }
-
 
 .navbar {
     background: transparent;

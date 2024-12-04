@@ -6,10 +6,79 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cormorant', serif;
     line-height: 1.6;
     color: #EFDCA3; /* Changed from #ffffff */
     background: linear-gradient(135deg #1a2a3d 0%, #2c465e 50%, #345268 100%);
+    font-weight: bold; /* Make all text bold */
+    font-size: 1.1rem; /* Increase base font size */
+}
+
+/* Navbar */
+.album-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold; /* Make navbar text bold */
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 2rem; /* Increase font size */
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1rem; /* Increase font size */
+    letter-spacing: 1px;
+    position: relative;
+    font-weight: bold; /* Make navbar links bold */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: transparent;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 0;
+    background-color: transparent;
+}
+
+.nav-links a:hover {
+    color: #e36161;
 }
 
 /* Album Page */
@@ -49,7 +118,7 @@ body {
 }
 
 .album-type {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Increase font size */
     font-weight: 600;
     color: #CC9370; /* Changed from #ffd700 */
     text-transform: uppercase;
@@ -59,7 +128,7 @@ body {
 }
 
 .album-info h1 {
-    font-size: 0; /* Hide the text if any */
+    font-size: 2.5rem; /* Increase font size */
     margin: 0; /* Remove default margin */
     font-weight: 800;
     letter-spacing: -0.04em;
@@ -71,7 +140,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Increase font size */
     color: #CC9370; /* Changed from #ffd700 */
 }
 
@@ -86,13 +155,14 @@ body {
     background: linear-gradient(145deg, #CC9370, #b17f5e); /* Changed to #CC9370 */
     border: none;
     color: #1a2a3d;
-    font-size: 1.8rem;
+    font-size: 2rem; /* Increase font size */
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(204, 147, 112, 0.3); /* Changed to #CC9370 */
+    font-weight: bold; /* Make play button text bold */
 }
 
 .play-button:hover {
@@ -122,8 +192,9 @@ body {
 }
 
 .track-number {
+    font-weight: 800;
     color: rgba(239, 220, 163, 0.7); /* Changed from rgba(255, 255, 255, 0.7) */
-    font-size: 1rem;
+    font-size: 1.2rem; /* Increase font size */
 }
 
 .track-info {
@@ -132,13 +203,15 @@ body {
 }
 
 .track-title {
-    font-weight: 500;
+    font-weight: 800;
     color: #EFDCA3; /* Changed from #ffffff */
+    font-size: 1.2rem; /* Increase font size */
 }
 
 .track-artist {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Increase font size */
     color: rgba(239, 220, 163, 0.7); /* Changed from rgba(255, 255, 255, 0.7) */
+    font-weight: 800;
 }
 
 /* Track Controls */
@@ -156,7 +229,7 @@ body {
     background: transparent;
     border: 2px solid rgba(204, 147, 112, 0.3); /* Changed to #CC9370 */
     color: #CC9370; /* Changed from #ffd700 */
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Increase font size */
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -177,7 +250,7 @@ body {
 
 .track-duration {
     color: rgba(239, 220, 163, 0.7); /* Changed from rgba(255, 255, 255, 0.7) */
-    font-size: 0.9rem;
+    font-size: 1.25rem; /* Increase font size */
 }
 
 .track-image {
@@ -221,7 +294,7 @@ body {
 }
 
 .about-text {
-    font-size: 1.1rem;
+    font-size: 1.3rem; /* Increase font size */
     line-height: 1.8;
 }
 
@@ -234,6 +307,7 @@ body {
 .band-members h2 {
     color: #ffd700;
     margin-bottom: 1rem;
+    font-size: 1.3rem; /* Increase font size */
 }
 
 .band-members ul {
@@ -243,6 +317,7 @@ body {
 .band-members li {
     padding: 0.5rem 0;
     color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem; /* Increase font size */
 }
 
 /* Merchandise Grid */
@@ -293,13 +368,13 @@ body {
 }
 
 .merch-name {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Increase font size */
     color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
 .merch-price {
-    font-size: 1.5rem;
+    font-size: 1.7rem; /* Increase font size */
     font-weight: bold;
     color: #ffd700;
     margin: 1rem 0;
@@ -315,6 +390,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
+    font-size: 1.2rem; /* Increase font size */
 }
 
 .merch-button:hover {
@@ -325,7 +401,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-brand {
-        font-size: 1.5rem;
+        font-size: 1.7rem; /* Increase font size */
     }
 
     .nav-links {
@@ -333,7 +409,7 @@ body {
     }
 
     .nav-links a {
-        font-size: 0.9rem;
+        font-size: 1rem; /* Increase font size */
         padding: 0.4rem 0.8rem;
     }
 
@@ -345,7 +421,7 @@ body {
     }
 
     .album-info h1 {
-        font-size: 2.5rem;
+        font-size: 2.7rem; /* Increase font size */
     }
 
     .album-cover {
