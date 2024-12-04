@@ -50,9 +50,11 @@ body {
     color: #f6f6f6;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: bold;
     letter-spacing: 1px;
     position: relative;
+
 }
 
 .nav-links a::after {
@@ -363,6 +365,23 @@ body {
     font-weight: bold;
     text-align: right;
     color: #EFDCA3;
+}
+
+.highlight-text {
+    font-size: 2.0rem; /* Increase font size */
+    font-weight: bold;
+    color: #EFDCA3;
+    margin-top: 2.0rem;
+    margin-bottom: 1.0rem; 
+    padding: 10000; 
+}
+
+.merch-header h1 {
+    font-size: 2.5rem;
+    color: #EFDCA3;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    font-weight: bold; /* Make the header bold */
 }
 
 /* Responsive Design */
