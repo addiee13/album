@@ -4,30 +4,13 @@
 @import 'album.css';
 @import 'merch.css';
 
+
 /* Global Styles */
 body {
     font-family: 'Cormorant', serif;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-    
-    .nav-links {
-        gap: 1.5rem;
-    }
-    
-    .album-title {
-        font-size: 2.5rem;
-    }
-    
-    .merch-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* Navbar */
 .navbar {
     background: transparent;
     padding: 1.2rem 2rem;
@@ -96,6 +79,18 @@ body {
     color: #ffffff;
 }
 
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/main_poster.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
 .cta-button {
     display: block;
     margin-top: 70vh; 
@@ -113,4 +108,23 @@ body {
     transition: all 0.3s ease;
     animation: fadeInUp 1s ease 0.4s;
     animation-fill-mode: backwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+    }
+    
+    .album-title {
+        font-size: 2.5rem;
+    }
+    
+    .merch-grid {
+        grid-template-columns: 1fr;
+    }
 }
