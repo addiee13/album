@@ -17,7 +17,8 @@ body {
     width: 100%;
     z-index: 1000;
     padding: 1.5rem;
-    background: linear-gradient(135deg, #EFDCA3 0%, #CC9370 100%);
+    background: linear-gradient(145deg, #EFDCA3, #CC9370);
+
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
@@ -85,6 +86,30 @@ body {
     padding: 3rem;
     gap: 3rem;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+}
+
+/* Custom Navbar Styles for Merch Page */
+.merch-navbar {
+    background: linear-gradient(135deg, #EFDCA3 0%, #CC9370 100%);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.merch-navbar .nav-links a {
+    color: #79614E; /* Changed to #79614E */
+}
+
+.merch-navbar .nav-links a::after {
+    background-color: #79614E; /* Changed to #79614E */
+}
+
+.merch-navbar .nav-links a:hover {
+    color: #f3e0a8; /* Changed to #EFDCA3 */
+}
+
+.merch-navbar .nav-links a:hover::after,
+.merch-navbar .nav-links a.active::after {
+    width: 100%;
+    background-color: #EFDCA3; /* Changed to #EFDCA3 */
 }
 
 .merch-cover {
