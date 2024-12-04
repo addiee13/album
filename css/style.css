@@ -23,7 +23,6 @@
     }
 }
 
-/* Add these styles to css/style.css */
 
 .navbar {
     background: transparent;
@@ -36,7 +35,7 @@
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.2);
 }
 
 .nav-brand {
@@ -79,13 +78,14 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: transparent; /* Ensure no yellow color */
+    background: transparent;
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
-    width: 0; /* Set width to 0 to remove the underline animation */
+    width: 0;
+    background: transparent;
 }
 
 .nav-links a:hover {
@@ -93,9 +93,11 @@
 }
 
 .cta-button {
-    position: absolute;
-    bottom: -20rem; /* Adjust the value as needed */
-    left: 38%;
+    display: block;
+    margin-top: 70vh; 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 250px; /* Add this line to make button smaller */
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
@@ -108,4 +110,3 @@
     animation: fadeInUp 1s ease 0.4s;
     animation-fill-mode: backwards;
 }
-
