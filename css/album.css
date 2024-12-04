@@ -8,7 +8,7 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #ffffff;
+    color: #EFDCA3; /* Changed from #ffffff */
     background: linear-gradient(135deg #1a2a3d 0%, #2c465e 50%, #345268 100%);
 }
 
@@ -37,7 +37,7 @@ body {
 
 .album-cover:hover {
     transform: scale(1.02);
-    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 40px rgba(204, 147, 112, 0.2); /* Changed to #CC9370 */
 }
 
 .album-info {
@@ -51,7 +51,7 @@ body {
 .album-type {
     font-size: 1rem;
     font-weight: 600;
-    color: #ffd700;
+    color: #CC9370; /* Changed from #ffd700 */
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-right: 1rem; 
@@ -63,7 +63,7 @@ body {
     margin: 0; /* Remove default margin */
     font-weight: 800;
     letter-spacing: -0.04em;
-    color: #ffffff;
+    color: #EFDCA3; /* Changed from #ffffff */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -72,7 +72,7 @@ body {
     align-items: center;
     gap: 1rem;
     font-size: 1rem;
-    color: #ffd700;
+    color: #CC9370; /* Changed from #ffd700 */
 }
 
 .player-controls {
@@ -83,7 +83,7 @@ body {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: linear-gradient(145deg, #ffd700, #ffed4a);
+    background: linear-gradient(145deg, #CC9370, #b17f5e); /* Changed to #CC9370 */
     border: none;
     color: #1a2a3d;
     font-size: 1.8rem;
@@ -92,12 +92,12 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(204, 147, 112, 0.3); /* Changed to #CC9370 */
 }
 
 .play-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(204, 147, 112, 0.4); /* Changed to #CC9370 */
 }
 
 .tracklist {
@@ -117,12 +117,12 @@ body {
 }
 
 .track:hover {
-    background: rgba(255, 215, 0, 0.1);
+    background: rgba(204, 147, 112, 0.1); /* Changed to #CC9370 */
     transform: translateX(10px);
 }
 
 .track-number {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(239, 220, 163, 0.7); /* Changed from rgba(255, 255, 255, 0.7) */
     font-size: 1rem;
 }
 
@@ -133,12 +133,12 @@ body {
 
 .track-title {
     font-weight: 500;
-    color: #ffffff;
+    color: #EFDCA3; /* Changed from #ffffff */
 }
 
 .track-artist {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(239, 220, 163, 0.7); /* Changed from rgba(255, 255, 255, 0.7) */
 }
 
 .track-controls {
@@ -152,8 +152,8 @@ body {
     height: 32px;
     border-radius: 50%;
     background: transparent;
-    border: 2px solid rgba(255, 215, 0, 0.3);
-    color: #ffd700;
+    border: 2px solid rgba(204, 147, 112, 0.3); /* Changed to #CC9370 */
+    color: #CC9370; /* Changed from #ffd700 */
     font-size: 0.8rem;
     cursor: pointer;
     display: flex;
@@ -168,7 +168,7 @@ body {
 }
 
 .track-duration {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(239, 220, 163, 0.7); /* Changed from rgba(255, 255, 255, 0.7) */
     font-size: 0.9rem;
 }
 
@@ -196,6 +196,7 @@ body {
     display: grid;
     gap: 3rem;
     align-items: start;
+    color: #EFDCA3; /* Changed from #ffffff */
 }
 
 .band-photo {
