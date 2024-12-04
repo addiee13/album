@@ -141,12 +141,14 @@ body {
     color: rgba(239, 220, 163, 0.7); /* Changed from rgba(255, 255, 255, 0.7) */
 }
 
+/* Track Controls */
 .track-controls {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
+.track-download-button,
 .track-play-button {
     width: 32px;
     height: 32px;
@@ -154,7 +156,7 @@ body {
     background: transparent;
     border: 2px solid rgba(204, 147, 112, 0.3); /* Changed to #CC9370 */
     color: #CC9370; /* Changed from #ffd700 */
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -163,8 +165,14 @@ body {
     opacity: 0;
 }
 
+.track:hover .track-download-button,
 .track:hover .track-play-button {
     opacity: 1;
+}
+
+.track-download-button:hover,
+.track-play-button:hover {
+    background: rgba(204, 147, 112, 0.1); /* Changed to #CC9370 */
 }
 
 .track-duration {
