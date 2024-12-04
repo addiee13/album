@@ -2,7 +2,7 @@ body {
     font-family: 'Cormorant', serif;
     line-height: 1.6;
     color: #EFDCA3;
-    background-image: url('../images/loom.png');
+    background-image: url('../images/ABOUT.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -49,6 +49,7 @@ body {
 .about-text {
     font-size: 1.2rem;
     line-height: 1.8;
+    color: #f1d684;
 }
 
 .band-photo {
@@ -64,7 +65,7 @@ body {
 
 .about-text h1 {
     font-size: 2.5rem;
-    color: #EFDCA3;
+    color: #f1d684;
     margin-bottom: 1rem;
     font-weight: bold;
 }
