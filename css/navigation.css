@@ -45,11 +45,12 @@
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: #fff;
+    background-color: transparent;
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
-    width: 100%;
+    width: 0;
+    background-color: transparent;
 }
