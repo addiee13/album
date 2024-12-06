@@ -35,24 +35,24 @@ body {
     transform: scale(1.1);
 }
 
-.nav-links {
+.home-nav-links {
     display: flex;
     list-style: none;
     gap: 2.5rem;
 }
 
-.nav-links a {
+.home-nav-links a {
     color: #79614E;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: all 0.3s ease;
     position: relative;
 }
 
-.nav-links a::after {
+.home-nav-links a::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -63,13 +63,13 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
+.home-nav-links a:hover::after,
+.home-nav-links a.active::after {
     width: 0;
     background: transparent;
 }
 
-.nav-links a:hover {
+.home-nav-links a:hover {
     color: #ffffff;
 }
 
@@ -175,6 +175,75 @@ body {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #f1d684;
+}
+
+/* Navbar */
+.about-navbar {
+    background: transparent;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.2);
+}
+
+.about-nav-brand {
+    flex: 1;
+    display: flex;
+}
+
+.about-nav-logo {
+    width: 100%;
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.about-nav-logo:hover {
+    transform: scale(1.1);
+}
+
+.about-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.about-nav-links a {
+    color: #79614E;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.about-nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    transition: width 0.3s ease;
+}
+
+.about-nav-links a:hover::after,
+.about-nav-links a.active::after {
+    width: 0;
+    background: transparent;
+}
+
+.about-nav-links a:hover {
+    color: #ffffff;
 }
 
 .band-photo {
